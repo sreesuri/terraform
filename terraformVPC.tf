@@ -5,7 +5,7 @@ provider "aws" {
 
 #Internet VPC
 resource "aws_vpc" "svunnamVPC" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "10.0.0.0/18"
   instance_tenancy = "default"
 }
 #subnets
