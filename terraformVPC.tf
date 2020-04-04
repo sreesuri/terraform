@@ -54,6 +54,6 @@ resource "aws_subnet" "svunnam-private-2" {
 resource "aws_internet_gateway" "svunnamIGW" {
   vpc_id = "$(aws_vpc.svunnamVPC.id)"
   tags ={
-    Name = "svunnamVPC"
+    Name = "svunnam"
   }
 }
