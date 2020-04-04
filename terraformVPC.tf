@@ -1,3 +1,4 @@
+Terraform v0.12.24
 #Internet VPC
 resource "aws_vpc" "svunnamVPC" {
   cidr_block = "10.0.0.0/16"
@@ -56,4 +57,9 @@ resource "aws_internet_gateway" "svunnamIGW" {
   tags {
     Name = "svunnam"
   }
+}
+  
+output "vpc_id" {
+  description = "The ID of the VPC"
+  value       = concat(aws_vpc.this.*.id, [""])[0]
 }
