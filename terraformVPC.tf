@@ -42,5 +42,5 @@ resource "aws_internet_gateway" "svunnamIGW" {
   
 output "vpc_id" {
   description = "The ID of the VPC"
-  value       = concat(aws_vpc.svunnam.*.id, [""])[0]
+  value       = concat(aws_vpc.svunnamVPC.*.id, [""])[0]
 }
