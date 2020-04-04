@@ -1,4 +1,3 @@
-Terraform v0.12.24
 #Internet VPC
 resource "aws_vpc" "svunnamVPC" {
   cidr_block = "10.0.0.0/16"
