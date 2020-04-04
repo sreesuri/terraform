@@ -45,7 +45,7 @@ resource "aws_subnet" "svunnam-private-2" {
   cidr_block = "10.0.4.0/24"
   map_public_ip_on_launch = "false"
   availability_zone = "us-east-1b"
-  tags{
+  tags {
     Name = "svunnam-private-2"
   }
 }
@@ -53,7 +53,7 @@ resource "aws_subnet" "svunnam-private-2" {
 #internet Gateway
 resource "aws_internet_gateway" "svunnamIGW" {
   vpc_id = "${aws_vpc.svunnamVPC.id}"
-  tags ={
+  tags {
     Name = "svunnam"
   }
 }
