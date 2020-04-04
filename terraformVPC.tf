@@ -4,8 +4,8 @@ resource "aws_vpc" "svunnamVPC" {
   instance_tenancy = "default"
   tags {
     Name = "svunnamVPC"
+    }
   }
-
 #subnets
 resource "aws_subnet" "svunnam-public-1" {
   vpc_id = "aws_vpc.svunnamVPC.id"
