@@ -1,3 +1,8 @@
+# t2.micro node with an AWS Tag naming it "HelloWorld"
+provider "aws" {
+  region = "us-east-1"
+}
+
 #Internet VPC
 resource "aws_vpc" "svunnamVPC" {
   cidr_block = "10.0.0.0/16"
