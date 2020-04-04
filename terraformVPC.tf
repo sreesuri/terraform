@@ -9,7 +9,7 @@ resource "aws_vpc" "svunnamVPC" {
   instance_tenancy = "default"
   tags {
     Name = "svunnamVPC"
-    }
+  }
 }
 #subnets
 resource "aws_subnet" "svunnam-public-1" {
@@ -19,7 +19,7 @@ resource "aws_subnet" "svunnam-public-1" {
   availability_zone = "us-east-1a"
   tags {
     Name = "svunnam-public-1"
-    }
+  }
 }
 
 #subnets
@@ -30,7 +30,7 @@ resource "aws_subnet" "svunnam-public-2" {
   availability_zone = "us-east-1b"
   tags {
     Name = "svunnam-public-2"
-    }
+  }
 }
 
 #subnets
@@ -41,7 +41,7 @@ resource "aws_subnet" "svunnam-private-1" {
   availability_zone = "us-east-1a"
   tags {
     Name = "svunnam-private-1"
-    }
+  }
 }
 
 #subnets
@@ -52,7 +52,7 @@ resource "aws_subnet" "svunnam-private-2" {
   availability_zone = "us-east-1b"
   tags {
     Name = "svunnam-private-2"
-    }
+  }
 }
 
 #internet Gateway
@@ -60,7 +60,7 @@ resource "aws_internet_gateway" "svunnamIGW" {
   vpc_id = "${aws_vpc.svunnamVPC.id}"
   tags {
     Name = "svunnamIGW"
-    }
+  }
 }
   
 output "vpc_id" {
